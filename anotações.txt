@@ -52,6 +52,20 @@ relacionamentos de tabelas
 	-criada uma rota para testar o relacionamento 
 			rota /one-to-one (primeira)
 	
+6-laravel relacionamentos One to Many (e inverso)
+	-na maioria dos sistemas, É O MAIS USADO!
+	-o relacionamento terá cursos, módulo e lições 
+	-criada a model Course juntamente com sua migration
+		php artisan make:model Course -m
+	-criada a model Module juntamente com sua migration
+		php artisan make:model Module -m
+	-criada a model Lesson juntamente com sua migration
+		php artisan make:model Lesson -m
+	-configurada as referidas migration com suas foreignId e demais tabelas 
+	-php artisan migrate
+	-configurado as $fillable das referidas Models 
+	-realizada toda configuração de relacionamentos entre as models 
 
+	pausa 07:00 min
 		
 
