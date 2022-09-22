@@ -1,10 +1,10 @@
 intro BDR 
-1A-ferramentas trabalhar com laravel 8 
+1-ferramentas trabalhar com laravel 8 
 	-setup
 		-git clone https://github.com/especializati/curso-laravel-8-relacionamentos-tabelas.git my-project
 	-explicação do andamento do curso 
 
-2A-instalar o laravel 8 com o docker 
+2-instalar o laravel 8 com o docker 
 	-clonado o referido repositório 
 	-apagado o histórico de git antigo 
 		rm -rf .git
@@ -21,7 +21,7 @@ intro BDR
 	subido a aplicação 
 		127.0.0.1:8180 
 
-3A-configurações no laravel 8 (ambiente docker) 
+3-configurações no laravel 8 (ambiente docker) 
 	-em DB_HOST laterado para o nome do container que está usando DB 
 		mysql
 	-ainda em .env, tudo de cache, em vez de ir para file, direciona para servidor redis, REDIS_HOST tmb em redis 
@@ -29,5 +29,13 @@ intro BDR
 	-rodada as migration para a criação de tabelas 
 		php artisan migrate 
 	
-4A-versionar projeto laravel e armazenar no github 
+4-versionar projeto laravel e armazenar no github 
+	-criado o repositorio do curso no github e executado o commit e push 
+
+relacionamentos de tabelas 
+5-laravel relacionamento One to One
+	- de um para um 
+	-a model 'User' será relacionada com uma nova model 'Preference' 
+	-criada a model Preference juntamente com sua migration
+		php artisan make:model Preference -m
 	-
