@@ -38,4 +38,20 @@ relacionamentos de tabelas
 	-a model 'User' será relacionada com uma nova model 'Preference' 
 	-criada a model Preference juntamente com sua migration
 		php artisan make:model Preference -m
-	-
+	-a migration 'Preference' recebe o id de comunicação com a tabela principa, 'User'
+		a tabela mais fraca sempre recebe o id de comunicação para alcançar a tabela mais forte 
+			$table->foreignId('user_id')->constrained('users');
+	-após a configuração da migration 'prefrences', php artisan migrate 
+	-configurado a $fillable da model 'Preference'
+	-feito o relacionamento entre as models 'User' e 'Preference' 
+		no final da model 'User', feito o relacionamento 'hasOne' para Preference. 
+		no final da model 'Preference', feito o relacionamento 'belongTo' para User. 
+	-utilizando o factory/UserFacotry.php, acessando o tinker, criado 10 usuarios fake 
+		php artisan tinker
+			\App\Models\User::factory()->count(10)->create();
+	-criada uma rota para testar o relacionamento 
+			rota /one-to-one (primeira)
+	
+
+		
+
