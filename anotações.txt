@@ -1,0 +1,33 @@
+intro BDR 
+1A-ferramentas trabalhar com laravel 8 
+	-setup
+		-git clone https://github.com/especializati/curso-laravel-8-relacionamentos-tabelas.git my-project
+	-explicação do andamento do curso 
+
+2A-instalar o laravel 8 com o docker 
+	-clonado o referido repositório 
+	-apagado o histórico de git antigo 
+		rm -rf .git
+	-criando .env 
+		cp .env.example .env 
+	-configurando o novo .env 
+	-subido os containers 
+		docker-compose up -d
+	-instalado o composer dentro do container da image (laravel_8)
+		docker-compose exec laravel_8 bash 
+		composer install
+	-gerado a key generate 
+		php artisan key:generate
+	subido a aplicação 
+		127.0.0.1:8180 
+
+3A-configurações no laravel 8 (ambiente docker) 
+	-em DB_HOST laterado para o nome do container que está usando DB 
+		mysql
+	-ainda em .env, tudo de cache, em vez de ir para file, direciona para servidor redis, REDIS_HOST tmb em redis 
+	-em config/app.php, o 'timezone' altera para 'America/Sao_Paulo'
+	-rodada as migration para a criação de tabelas 
+		php artisan migrate 
+	
+4A-versionar projeto laravel e armazenar no github 
+	-
