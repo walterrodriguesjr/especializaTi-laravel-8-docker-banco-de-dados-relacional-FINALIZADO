@@ -65,7 +65,28 @@ relacionamentos de tabelas
 	-php artisan migrate
 	-configurado as $fillable das referidas Models 
 	-realizada toda configuração de relacionamentos entre as models 
+	-criada uma rota para testar o relacionamento 
+			rota /one-to-many (segunda)
+	
+7-laravel relacionamento many to Many 
+	-muitos para muitos 
+	-criada a model Permission juntamente com sua migration
+		php artisan make:model Permission -m
+	-na mesma migration que foi criada para 'permissions'. foi criada uma tabela pivô, de nome 
+	'permission_user', que faz a conexão de 'users' e 'permissions', nela contem as 'foreignId'
+	-rodado 'php artisan migrate' para criar as tabelas 
+	-criado as funções de relacionamento nas models 'User' e 'Permission' 
+	-criada uma rota para testar o relacionamento 
+			rota /many-to-many (terceira)
+	
+8-laravel relacionamento many to Many (Pivô) 
+	-OK 
 
-	pausa 07:00 min
+9-paravel relacionamento polimórfico - One to One 
+	-serve para poder tmb relacionar imagens 
+	-adiciona a coluna path 
+	-criada a model Image juntamente com sua migration
+		php artisan make:model Image -m
+	-
 		
 
